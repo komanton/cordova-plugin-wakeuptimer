@@ -85,6 +85,8 @@ public class WakeupReceiver extends BroadcastReceiver {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch (Exception e){
+			e.printStackTrace();
 		}
 	}
 }
