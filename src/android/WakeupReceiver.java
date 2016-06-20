@@ -48,12 +48,7 @@ public class WakeupReceiver extends BroadcastReceiver {
 				i.putExtra("extra", extras);
 			}
 			i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			boolean started = context.startActivityIfNeeded(i, 0);
-			Log.d(LOG_TAG,"startActivityIfNeeded = " + started);			
-			if(!started){
-				Log.d(LOG_TAG,"startActivity");
-				context.startActivity(i);
-			}	
+			context.startActivity(i);
 
 			if(WakeupPlugin.connectionCallbackContext!=null) {
 				JSONObject o=new JSONObject();
